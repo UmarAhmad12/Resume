@@ -75,3 +75,5 @@ div.style.paddingInline = "10em"
     div.appendChild(gitHubTag);
     gitHubTag.style.marginLeft = "20px";
 }
+
+document.body.appendChild(div);
