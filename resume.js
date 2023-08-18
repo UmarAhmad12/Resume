@@ -125,7 +125,7 @@ div.style.paddingInline = "10em"
     let collegeName = document.createElement("p");
     title.innerText = "Education:";
     eduInfo.innerText = "Maulana Azad College of Engineering & Technology, Neoraganj, Neora, Patna";
-    collageName.innerText = "B.Tech in Mechanical Engineering (2018-2022)";
+    collegeName.innerText = "B.Tech in Mechanical Engineering (2018-2022)";
     education.appendChild(title);
     education.appendChild(eduInfo);
     education.appendChild(collegeName);
@@ -134,6 +134,50 @@ div.style.paddingInline = "10em"
     // css style
     title.style.fontSize = "1.5em";
     title.style.fontWeight = "bold";
+}
+
+{
+    let hr = document.createElement('hr');
+    div.appendChild(hr)
+}
+
+{
+    //skills
+
+    let skillArr = ["HTML5", "CSS3", "JavaScript", "Node.js", "React.js", "DSA", { Database: ["mySQL", 'MongoDB'] }]
+    let skillBox = document.createElement("div");
+    let title = document.createElement("p");
+    let list = document.createElement("ul");
+    skillArr.map((value) => {
+        let li = document.createElement("li");
+        let textNode;
+
+        if (typeof value === "object") {
+            for (let key in value) {
+                if (Array.isArray(value[key])) {
+                    let dataList = value[key].join(',');
+                    textNode = document.createTextNode(`${key}: ${dataList}`)
+                } else {
+                    textNode = document.createTextNode(`${key}: ${value[key]}`)
+                }
+                li.appendChild(textNode);
+            }
+        } else {
+            textNode = document.createTextNode(value);
+            li.appendChild(textNode);
+        }
+        list.appendChild(li);
+
+    });
+    title.innerText = "Skills:";
+    skillBox.appendChild(title)
+    skillBox.appendChild(list);
+    div.appendChild(skillBox);
+
+    // css 
+    title.style.fontSize = "1.5em";
+    title.style.fontWeight = "bold";
+
 }
 
 {
