@@ -76,4 +76,44 @@ div.style.paddingInline = "10em"
     gitHubTag.style.marginLeft = "20px";
 }
 
+{
+    // profile 
+    let img = document.createElement("img");
+    let src = document.createAttribute("src");
+    src.value = "./Umar1.jpg";
+    img.setAttributeNode(src);
+    img.style.width = "20%";
+    img.style.position = "absolute";
+    img.style.top = "0";
+    img.style.left = "80%";
+    img.style.borderRadius = "50%"
+    img.style.width = "180px";
+    img.style.height = "180px";
+    img.style.objectFit = "cover";
+    div.appendChild(img);
+}
+
+{
+    let hr = document.createElement('hr');
+    div.appendChild(hr)
+}
+
+{
+    let profile = document.createElement("div");
+    profile.className = "profile";
+    let text = document.createElement("p");
+    let about = "I want to enhance and practically apply my skills while working in a dynamic and visionary environment, and strive for as much possible perfection in the field of Computer Science.";
+    let spanProfile = document.createElement("span");
+    spanProfile.innerText = "Profile: ";
+    text.appendChild(spanProfile)
+    text.appendChild(document.createTextNode(about));
+    profile.appendChild(text)
+    div.appendChild(profile);
+}
+
+{
+    let hr = document.createElement('hr');
+    div.appendChild(hr)
+}
+
 document.body.appendChild(div);
