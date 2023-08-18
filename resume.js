@@ -116,4 +116,29 @@ div.style.paddingInline = "10em"
     div.appendChild(hr)
 }
 
+{
+    // Education
+
+    let education = document.createElement("div");
+    let title = document.createElement("p")
+    let eduInfo = document.createElement("p");
+    let collageName = document.createElement("p");
+    title.innerText = "Education:";
+    eduInfo.innerText = "Maulana Azad College of Engineering & Technology, Neoraganj, Neora, Patna";
+    collageName.innerText = "B.Tech in Mechanical Engineering (2018-2022)";
+    education.appendChild(title);
+    education.appendChild(eduInfo);
+    education.appendChild(collageName);
+    div.appendChild(education)
+
+    // css style
+    title.style.fontSize = "1.5em";
+    title.style.fontWeight = "bold";
+}
+
+{
+    let hr = document.createElement('hr');
+    div.appendChild(hr)
+}
+
 document.body.appendChild(div);
