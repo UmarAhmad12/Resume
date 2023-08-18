@@ -185,4 +185,75 @@ div.style.paddingInline = "10em"
     div.appendChild(hr)
 }
 
+{
+    //project section
+
+    let projectName = ["Blog Application", "Movie search Application." ];
+    // let projectLink = ["https://thunderous-bubblegum-72e37e.netlify.app/", "https://animated-salamander-721492.netlify.app/"];
+    let gitRepoLink = [
+        "https://github.com/UmarAhmad12/Milestone-2-Assignments/tree/main/Project-1-Blog-App",
+        "https://github.com/UmarAhmad12/Milestone-2-Assignments/tree/main/Project-2-Movie-Search-Web-App"
+    ];
+    let projectBox = document.createElement('div');
+    let title = document.createElement("p");
+    title.innerText = "Projects:";
+    let infoList = document.createElement("ul");
+
+    let projectInfo1 = {
+        element: ["HTML5", "CSS3", "JavaScript"],
+        achievement: "Able to understand the uses of HTML, CSS and Js",
+        gitRepo: gitRepoLink[0]
+    };
+
+    let projectInfo2 = {
+        element: ["HTML, CSS, JavaScript and OMDB API"],
+        achievement: "Increased clear understanding about OMDB API",
+        gitRepo: gitRepoLink[1]
+    };
+
+    projectName.map((value, idx) => {
+        let li = document.createElement('li');
+        let aTag = document.createElement("h4");
+
+        aTag.innerText = projectName[idx];
+        li.appendChild(aTag);
+
+        // Add project information to the list item
+        let projectInfo;
+        if (idx === 0) {
+            projectInfo = projectInfo1;
+        } else if (idx === 1) {
+            projectInfo = projectInfo2;
+        }
+
+        let infoParagraph = document.createElement("p");
+        let elementsText = `Elements: ${Array.isArray(projectInfo.element) ? projectInfo.element.join(", ") : ""}`;
+        let achievementText = `Achievements: ${projectInfo.achievement}`;
+        let gitLink = document.createElement("a");
+        gitLink.innerText = "GitHub Repo";
+        gitLink.href = projectInfo.gitRepo;
+        gitLink.target = "_blank";
+
+        infoParagraph.innerText = `${elementsText}\n${achievementText}\n`;
+        infoParagraph.appendChild(gitLink);
+        li.appendChild(infoParagraph);
+
+        infoList.appendChild(li);
+
+        // css
+        title.style.fontSize = "1.5em";
+        title.style.fontWeight = "bold"
+    });
+
+    projectBox.appendChild(title);
+    projectBox.appendChild(infoList);
+    div.appendChild(projectBox);
+
+}
+
+{
+    let hr = document.createElement('hr');
+    div.appendChild(hr)
+}
+
 document.body.appendChild(div);
