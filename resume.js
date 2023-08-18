@@ -122,13 +122,13 @@ div.style.paddingInline = "10em"
     let education = document.createElement("div");
     let title = document.createElement("p")
     let eduInfo = document.createElement("p");
-    let collageName = document.createElement("p");
+    let collegeName = document.createElement("p");
     title.innerText = "Education:";
     eduInfo.innerText = "Maulana Azad College of Engineering & Technology, Neoraganj, Neora, Patna";
     collageName.innerText = "B.Tech in Mechanical Engineering (2018-2022)";
     education.appendChild(title);
     education.appendChild(eduInfo);
-    education.appendChild(collageName);
+    education.appendChild(collegeName);
     div.appendChild(education)
 
     // css style
