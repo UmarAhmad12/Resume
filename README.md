@@ -1,1 +1,1 @@
-# ResumeWithJs there is a resume which is completely built on JS to understand the DOM
+# Resume which is completely built on Javascript to understand the DOM.
